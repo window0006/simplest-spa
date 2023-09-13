@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["./packages", "./scripts", "./src"],
+  "exclude": ["./node_modules", "**/node_modules"],
+  "ts-node": {
+    "esm": true
+  }
+}
