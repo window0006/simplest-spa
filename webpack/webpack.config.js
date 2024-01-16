@@ -18,23 +18,6 @@ const devServer = {
   devMiddleware: {
     writeToDisk: true,
   },
-  // proxy: [
-  //   {
-  //     context: ['/api'],
-  //     ws: true,
-  //     target:
-  //       process.env.env === 'mock'
-  //         ? 'http://apidoc.i.ssc.shopeemobile.com/mock/2255/'
-  //         : process.env.API_HOST || proxyTarget,
-  //     changeOrigin: true,
-  //     onProxyRes(proxyRes, _, res) {
-  //       const { protocol, host, path } = proxyRes.req;
-  //       res.writeHead(proxyRes.statusCode, {
-  //         ...proxyRes.headers,
-  //         'x-webpack-proxy-target': `${protocol}//${host}${path}`,
-  //       });
-  //     },
-  //   },
   //   {
   //     context: ['/auth/login', '/auth/logout'],
   //     target: process.env.API_HOST || proxyTarget,
