@@ -1,9 +1,10 @@
 import React from 'react';
+import Router from './router/router';
 
-export const App = () => {
+const App: React.FC = () => {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
-  );
+    <Router />
+  )
 };
+
+export default App;

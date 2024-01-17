@@ -7,3 +7,9 @@ For buliding demos as soon as possible.
 * pnpm
 * webpack
 * typescript
+
+## 播放器的常识
+HTML5 video 标签
+HTML5 audio 标签
+
+媒体文件是如何加载的？
