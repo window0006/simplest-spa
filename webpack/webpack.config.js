@@ -7,6 +7,8 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
+import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+
 const isDevelopment = process.env.NODE_ENV !== 'production';
 const __dirname = process.cwd();
 
@@ -50,6 +52,7 @@ const webpackConfig = {
     },
   },
   plugins: [
+    new ReactRefreshPlugin(),
     new ForkTsCheckerWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './public/index.html'),

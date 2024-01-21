@@ -18,13 +18,13 @@ const MainLayout: React.FC = () => {
     <Layout>
       <Header />
       <Content style={{ padding: '0 48px' }}>
-        <Breadcrumb style={{ margin: '16px 0' }}>
+        {/* <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
           <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
+        </Breadcrumb> */}
         <Layout
-          style={{ padding: '24px 0', background: colorBgContainer, borderRadius: borderRadiusLG }}
+          style={{ marginTop: 16, padding: '24px 0', background: colorBgContainer, borderRadius: borderRadiusLG }}
         >
           <Sider />
           <ErrorBoundary>

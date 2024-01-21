@@ -6,7 +6,6 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { UserOutlined, LaptopOutlined } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
 import { MenuItemType } from 'antd/es/menu/hooks/useItems';
 import MainLayout from '../layout';
 import NotFound from '../error/NotFound';
@@ -48,7 +47,7 @@ export const routes: RouteItem[] = [
           },
           {
             path: '/about/you',
-            element: <>You</>,
+            element: <>You hh</>,
             menu: {
               key: 'about-you',
               title: 'About You',
