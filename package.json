@@ -24,6 +24,7 @@
     "xgplayer": "^3.0.11"
   },
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@types/webpack-env": "^1.18.1",
