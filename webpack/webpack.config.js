@@ -41,12 +41,13 @@ const webpackConfig = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',
-    publicPath: '/',
+    filename: 'static/[name].[contenthash].js',
+    assetModuleFilename: 'static/imgs/[name].[hash:8][ext]',
+    publicPath: isDevelopment ? '/' : '/xx/',
     clean: true,
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
@@ -64,7 +65,9 @@ const webpackConfig = {
     }),
     new CleanWebpackPlugin(),
     isDevelopment && new webpack.HotModuleReplacementPlugin(),
-    !isDevelopment && new MiniCssExtractPlugin(),
+    !isDevelopment && new MiniCssExtractPlugin({
+      filename: 'static/[name].[contenthash].css',
+    }),
     shouldOpenAnalyzer && new BundleAnalyzerPlugin(),
   ].filter(Boolean),
   module: {

@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "cross-env NODE_ENV=development node ./webpack/server",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js",
+    "upload": "node ./scripts/upload-static.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,6 +26,7 @@
     "xgplayer": "^3.0.11"
   },
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@types/webpack-env": "^1.18.1",
@@ -35,6 +38,7 @@
     "detect-port-alt": "^1.1.6",
     "filemanager-webpack-plugin": "^8.0.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "ftp": "^0.3.10",
     "html-webpack-plugin": "^5.5.3",
     "ip": "^1.1.8",
     "is-root": "^3.0.0",

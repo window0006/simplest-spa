@@ -21,7 +21,7 @@ export type RouteItem = {
 
 export const routes: RouteItem[] = [
   {
-    path: '/',
+    path: '/xx',
     element: <MainLayout />,
     menu: {
       key: 'home',
@@ -30,7 +30,7 @@ export const routes: RouteItem[] = [
     },
     children: [
       {
-        path: '/about',
+        path: '/xx/about',
         menu: {
           key: 'about',
           title: 'About',
@@ -38,7 +38,7 @@ export const routes: RouteItem[] = [
         },
         children: [
           {
-            path: '/about/me',
+            path: '/xx/about/me',
             element: <>ME</>,
             menu: {
               key: 'about-me',
@@ -46,7 +46,7 @@ export const routes: RouteItem[] = [
             },
           },
           {
-            path: '/about/you',
+            path: '/xx/about/you',
             element: <>You hh</>,
             menu: {
               key: 'about-you',
@@ -56,7 +56,7 @@ export const routes: RouteItem[] = [
         ],
       },
       {
-        path: '*',
+        path: '/xx/*',
         element: <NotFound />,
         menu: {
           key: 'not-found',
