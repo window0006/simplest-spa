@@ -1,7 +1,3 @@
-// 通过 ftp 将 dist 目录上传到云服务器
-// 1. 安装 ftp 插件
-// npm install ftp --save-dev
-// 2. 创建 ftp.js
 import fs from 'fs';
 import Ftp from 'ftp';
 import path from 'path';
@@ -64,11 +60,10 @@ function uploadDirectory(localDir, remoteDir) {
 
 const ftp = new Ftp();
 
-ftp.connect({
-  host: '120.78.141.29',
-  user: 'ftpuser',
-  password: 'hello123'
-});
+console.log(process.env.FTP_CFG)
+process.exit(0)
+
+ftp.connect({});
 
 ftp.on('ready', () => {
   console.log('ftp ready');
@@ -85,10 +80,3 @@ ftp.on('ready', () => {
 ftp.on('error', (err) => {
   console.log('ftp error', err);
 });
-
-// 3. 修改 package.json
-// "scripts": {
-//   "deploy": "node ftp.js"
-// }
-// 4. 执行命令
-// npm run deploy
