@@ -26,6 +26,3 @@ jobs:
 
     - name: Build
       run: pnpm run build
-
-    - name: Upload
-      run: "FTP_CFG=${{ secrets.FTP_CFG }} pnpm run upload"
