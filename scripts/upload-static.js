@@ -60,10 +60,11 @@ function uploadDirectory(localDir, remoteDir) {
 
 const ftp = new Ftp();
 
-console.log(process.env.FTP_CFG)
-process.exit(0)
-
-ftp.connect({});
+ftp.connect({
+  host: process.env.FTP_HOST,
+  user: process.env.FTP_USER,
+  password: process.env.FTP_PASSWORD,
+});
 
 ftp.on('ready', () => {
   console.log('ftp ready');

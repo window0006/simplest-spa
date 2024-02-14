@@ -28,4 +28,8 @@ jobs:
       run: pnpm run build
 
     - name: Upload
-      run: FTP_CFG=${{ secrets.FTP_CFG }} pnpm run upload
+      run: pnpm run upload
+      env:
+        FTP_HOST: ${{ secrets.FTP_HOST }}
+        FTP_USER: ${{ secrets.FTP_USER }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
